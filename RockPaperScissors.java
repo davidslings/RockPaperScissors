@@ -27,6 +27,11 @@ public class RockPaperScissors {
             int yourChoice;
             try {
                 yourChoice = scan.nextInt();
+                if (yourChoice > 3 || yourChoice < 1) {
+                    System.out.println("Invalid input: enter a number between 1 and 3.");
+                    scan.close();
+                    return;
+                }
             } catch (Exception e) {
                 System.out.println("Invalid input: enter a number between 1 and 3.");
                 scan.close();
